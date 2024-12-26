@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ReverseProxy
+    env: static
+    routes:
+      - type: rewrite
+        source: /*
+        destination: https://gtwdev.perurail.com/*
+    staticPublishPath: .
